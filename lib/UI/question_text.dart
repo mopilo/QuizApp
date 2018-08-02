@@ -36,6 +36,12 @@ class QuestionTextState extends State<QuestionText> with SingleTickerProviderSta
     }
 
     @override
+    void dispose(){
+      _fontSizeAnimationController.dispose();
+      super.dispose();
+    }
+
+    @override
     void didUpdateWidget(QuestionText oldWidget) {
         // TODO: implement didUpdateWidget
         super.didUpdateWidget(oldWidget);
